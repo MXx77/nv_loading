@@ -13,10 +13,6 @@ files {
     'html/assets/images/*.png',
 }
 
-escrow_ignore {
-    'config.lua'
-}
-
 lua54 'yes'
 
 loadscreen_manual_shutdown 'yes'
