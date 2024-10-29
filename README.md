@@ -1,3 +1,3 @@
 FiveM Loading with Tailwind
 
-[Discord]([URL](https://discord.gg/nvscripts))
+[Discord](https://discord.gg/nvscripts)
