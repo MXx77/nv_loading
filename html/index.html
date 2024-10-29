@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/akrobat" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              akrobat: ["Akrobat", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body
+    class="overflow-y-hidden font-akrobat bg-[url('assets/images/nvscripts-bg.png')] bg-cover bg-no-repeat bg-center w-full h-screen flex items-center justify-center px-4 overflow-x-hidden"
+  >
+    <main class="flex items-center flex-col">
+      <!-- top section -->
+      <section
+        class="bg-[url('assets/svg/top-text-bg.svg')] max-[1280px]:bg-center bg-contain min-[1281px]:bg-cover min-[1281px]:w-[965px] h-[410px] bg-no-repeat flex items-center justify-center"
+      >
+        <div
+          class="flex gap-2 md:gap-4 min-[1281px]:gap-8 items-center w-9/12 md:w-8/12 lg:w-6/12 min-[1281px]:w-[722px] -rotate-[7.5deg] max-[1280px]:ml-6 max-[1280px]:mt-6 min-[1281px]:mt-20 min-[1281px]:ml-10"
+        >
+          <!-- left text -->
+          <div
+            class="font-extrabold text-lg md:text-3xl min-[1281px]:text-[44px]"
+          >
+            <p
+              class="bg-clip-text text-transparent bg-gradient-to-r from-[#00D2FF] to-[#3A7BD5] leading-none"
+            >
+              NVSCRIPTS
+            </p>
+            <p
+              class="bg-clip-text text-transparent bg-gradient-to-b from-white to-[#8A8A8A] leading-none"
+            >
+              NVSCRIPTS
+            </p>
+          </div>
+          <!-- seperate bar -->
+          <svg
+            width="10"
+            viewBox="0 0 3 115"
+            class="h-[40px] md:h-20 lg:h-auto"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1"
+              y1="-1"
+              x2="113"
+              y2="-1"
+              transform="matrix(-4.33374e-08 1 -0.991445 0.130526 0.637939 0.850418)"
+              stroke="url(#paint0_linear_2_81)"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_2_81"
+                x1="4"
+                y1="-1.69374e-07"
+                x2="4.23474"
+                y2="5.076"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#2C5AAF" />
+                <stop offset="1" stop-color="#3995DA" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <!-- right text -->
+          <p
+            class="text-white font-extralight text-[10px] md:text-base min-[1281px]:text-lg uppercase leading-tight"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </section>
+      <!-- loading screen -->
+      <section
+        class="flex items-center justify-center flex-col min-[1281px]:flex-row -rotate-[7.5deg] max-md:-mt-[10%] min-[1281px]:-mt-10"
+      >
+        <span
+        class="flex items-center justify-center bg-[url('assets/svg/percentage-bg.svg')] bg-no-repeat bg-center bg-contain w-[289px] h-[400px] text-[75px] font-extrabold text-[#D9D9D9]  -mt-16 min-[1281px]:-mt-0"
+        >
+          <span id="percent" class="-mt-0 -ml-4">100%</span>
+        </span>
+
+       <div class="relative h-[150px] -ml-10 my-16 min-[1281px]:my-0  flex items-center gap-2 -rotate-[2deg]">
+        <!-- loading top text -->
+         <div class="absolute left-8 font-extrabold -top-24 text-[100px] leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#00D2FF] to-[#3A7BD5]">
+          LOADING
+         </div>
+         <div class="absolute -right-4 font-extrabold -top-24 text-[100px] text-[#212C42]">
+          <div class="relative flex items-center justify-center leading-none">
+            <p class="z-0">LOADING </p>
+           <span class="absolute z-10">
+            <span class="relative flex items-center justify-center">
+              <span class="absolute bg-white/40 size-10 rounded-full blur-md z-10"></span>
+              <span class="absolute text-2xl text-white z-20 ">GAME</span>
+            </span>
+           </span>
+          </div>
+         </div>
+         <!-- loading bottom text -->
+          <div class="absolute font-akrobat font-extrabold text-white right-10 bottom-9 flex flex-col">
+            <span class="text-3xl">NVSCRIPTS</span>
+            <span class="text-white/50">NVSCRIPTS</span>
+          </div>
+         <!-- new svg -->
+         <svg width="660" height="288" viewBox="0 0 660 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M491.723 122.968L489.103 122.968L487.743 125.349L471.213 154.278L471.192 154.312L471.173 154.348L456.584 180.944L331.612 180.944L31.7372 180.944C48.6477 149.503 53.2987 114.313 44.6018 82.7912L651.945 82.7914L625.223 122.967L539.832 122.968L491.723 122.968Z" stroke="#B8E5FF" stroke-opacity="0.15" stroke-width="8"/>
+          <path d="M491.462 124.951L490.153 124.951L489.472 126.141L472.941 155.07L472.932 155.088L472.921 155.106L457.66 182.927L331.351 182.927L28.4775 182.927C46.7148 150.641 51.6678 114.045 42.0987 81.6014L41.8643 80.808L655.526 80.808L626.166 124.95L539.571 124.95L491.462 124.951Z" stroke="url(#paint0_linear_2018_162)" stroke-opacity="0.15" stroke-width="4"/>
+          <g id="test" >
+          <g id="container1" >
+          <path d="M108.804 96.405L96.0883 96.405L62.653 166.358L75.3689 166.358L108.804 96.405Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container2" >
+          <path d="M134.237 96.4048L121.521 96.4048L88.0857 166.358L100.802 166.358L134.237 96.4048Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container3" >
+          <path d="M159.668 96.4052L146.952 96.4052L113.517 166.358L126.233 166.358L159.668 96.4052Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container4">
+          <path d="M185.1 96.4047L172.384 96.4047L138.949 166.358L151.665 166.358L185.1 96.4047Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container5">
+          <path d="M210.531 96.4052L197.816 96.4052L164.38 166.358L177.096 166.358L210.531 96.4052Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container6">
+          <path d="M235.963 96.4047L223.247 96.4047L189.812 166.358L202.528 166.358L235.963 96.4047Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container7">
+          <path d="M261.395 96.4052L248.679 96.4052L215.243 166.358L227.959 166.358L261.395 96.4052Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container8">
+            <path d="M286.827 96.4047L274.111 96.4047L240.676 166.358L253.392 166.358L286.827 96.4047Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container9">
+            <path d="M312.259 96.4042L299.543 96.4042L266.108 166.357L278.824 166.357L312.259 96.4042Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container10">
+            <path d="M337.69 96.4048L324.974 96.4048L291.539 166.358L304.255 166.358L337.69 96.4048Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container11">
+            <path d="M363.122 96.4042L350.406 96.4042L316.971 166.357L329.687 166.357L363.122 96.4042Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container12">
+            <path d="M388.554 96.4047L375.838 96.4047L342.402 166.358L355.118 166.358L388.554 96.4047Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container13">
+            <path d="M413.986 96.4043L401.27 96.4043L367.835 166.357L380.551 166.357L413.986 96.4043Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+          <g id="container14">
+            <path d="M439.418 96.4048L426.702 96.4048L393.267 166.358L405.982 166.358L439.418 96.4048Z" fill="#B8E5FF" fill-opacity="0.15"/>
+          </g>
+        </g>
+          <g filter="url(#filter6_d_2018_162)">
+          <path d="M21.8323 197.8L245.444 197.8L241.309 203.478L180.959 203.479L150.784 203.478L137.969 206.723L17.2696 206.723L21.8323 197.8Z" fill="#B8E5FF"/>
+          </g>
+          <g filter="url(#filter7_d_2018_162)">
+          <path d="M498.688 131.373L503.689 131.373L474.271 183.919L469.271 183.919L498.688 131.373Z" fill="#00A3FF"/>
+          </g>
+          <defs>
+          <filter id="filter0_d_2018_162" x="32.653" y="66.405" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter1_d_2018_162" x="58.0856" y="66.4048" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter2_d_2018_162" x="83.5172" y="66.4052" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter3_d_2018_162" x="108.949" y="66.4047" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter4_d_2018_162" x="134.38" y="66.4052" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter5_d_2018_162" x="159.812" y="66.4047" width="106.151" height="129.953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="15"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter6_d_2018_162" x="0.269653" y="180.8" width="262.175" height="42.9232" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="8.5"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.639216 0 0 0 0 1 0 0 0 0.45 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <filter id="filter7_d_2018_162" x="447.271" y="109.373" width="78.4181" height="96.5466" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="11"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2018_162"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2018_162" result="shape"/>
+          </filter>
+          <linearGradient id="paint0_linear_2018_162" x1="548.608" y1="78.8254" x2="328.583" y2="168.886" gradientUnits="userSpaceOnUse">
+          <stop stop-color="white"/>
+          <stop offset="1" stop-color="#B8E5FF" stop-opacity="0"/>
+          </linearGradient>
+          </defs>
+          </svg>
+          
+        </div>
+     
+      </section>
+    
+      </section>
+      <section class="flex flex-col items-center">
+        <!-- about us -->
+        <div class="-rotate-[7.5deg]">
+          <img
+            src="assets/svg/about-us.svg"
+            class="min-[1281px]:w-full"
+            alt=""
+          />
+        </div>
+        <!-- button container -->
+        <div
+          class="flex items-center justify-center flex-wrap gap-8 max-[1280px]:w-11/12 -rotate-[7.5deg] -mt-[5.5%]"
+        >
+          <!-- discord -->
+          <button
+            class="bg-[url('assets/images/btn-bg.png')] flex items-center w-[390px] bg-center bg-no-repeat bg-contain"
+          >
+            <img src="assets/images/discord.png" class="-rotate-12" alt="" />
+            <span
+              class="font-extrabold flex flex-col items-start text-lg text-white/35 -ml-4"
+            >
+              <span>OUR WEBSITE</span>
+              <span
+                class="font-extrabold text-2xl text-white uppercase leading-none"
+                >discord.gg/nvscripts</span
+              >
+            </span>
+          </button>
+          <!-- youtube -->
+          <button
+            class="bg-[url('assets/images/btn-bg.png')] flex items-center w-[390px] bg-center bg-no-repeat bg-contain"
+          >
+            <img
+              src="assets/images/youtube.png"
+              class="-rotate-12 ml-4"
+              alt=""
+            />
+            <span
+              class="font-extrabold flex flex-col items-start text-lg text-white/35 -ml-4"
+            >
+              <span>OUR WEBSITE</span>
+              <span
+                class="font-extrabold text-2xl text-white uppercase leading-none"
+                >discord.gg/nvscripts</span
+              >
+            </span>
+          </button>
+          <!-- discord -->
+          <button
+            class="bg-[url('assets/images/btn-bg.png')] flex items-center w-[390px] bg-center bg-no-repeat bg-contain"
+          >
+            <img src="assets/images/discord.png" class="-rotate-12" alt="" />
+            <span
+              class="font-extrabold flex flex-col items-start text-lg text-white/35 -ml-4"
+            >
+              <span>OUR WEBSITE</span>
+              <span
+                class="font-extrabold text-2xl text-white uppercase leading-none"
+                >discord.gg/nvscripts</span
+              >
+            </span>
+          </button>
+        </div>
+      </section>
+      <div class="h-40"></div>
+    </main>
+  </body>
+  <style>
+
+.container path {
+    fill-opacity: 0.15;
+}
+
+/* Für den ersten Container */
+@keyframes glow1 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container1 path {
+    animation: glow1 3s forwards;
+}
+
+/* Für den zweiten Container, Verzögerung von 3s */
+@keyframes glow2 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container2 path {
+    animation: glow2 3s forwards;
+    animation-delay: 2s;
+}
+
+/* Für den dritten Container, Verzögerung von 6s */
+@keyframes glow3 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container3 path {
+    animation: glow3 3s forwards;
+    animation-delay: 4s;
+}
+
+/* Für den vierten Container, Verzögerung von 9s */
+@keyframes glow4 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container4 path {
+    animation: glow4 3s forwards;
+    animation-delay: 6s;
+}
+
+/* Für den fünften Container, Verzögerung von 12s */
+@keyframes glow5 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container5 path {
+    animation: glow5 3s forwards;
+    animation-delay: 8s;
+}
+
+/* Für den sechsten Container, Verzögerung von 15s */
+@keyframes glow6 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container6 path {
+    animation: glow6 3s forwards;
+    animation-delay: 10s;
+}
+
+@keyframes glow7 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container7 path {
+    animation: glow6 3s forwards;
+    animation-delay: 12s;
+}
+
+@keyframes glow8 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container8 path {
+    animation: glow6 3s forwards;
+    animation-delay: 14s;
+}
+
+@keyframes glow9 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container9 path {
+    animation: glow6 3s forwards;
+    animation-delay: 16s;
+}
+
+@keyframes glow10 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container10 path {
+    animation: glow6 3s forwards;
+    animation-delay: 18s;
+}
+
+@keyframes glow11 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container11 path {
+    animation: glow6 3s forwards;
+    animation-delay: 20s;
+}
+
+@keyframes glow12 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container12 path {
+    animation: glow6 3s forwards;
+    animation-delay: 20s;
+}
+
+@keyframes glow13 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container13 path {
+    animation: glow6 3s forwards;
+    animation-delay: 20s;
+}
+
+@keyframes glow14 {
+    0% { fill-opacity: 0.15; }
+    50% { fill-opacity: 1; }
+    100% { fill-opacity: 1; }
+}
+
+#container14 path {
+    animation: glow6 3s forwards;
+    animation-delay: 20s;
+}
+/* Letzte Phase: alle Container verschwinden ruckartig */
+@keyframes resetFilters {
+    0% { fill-opacity: 1; }
+    99% { fill-opacity: 1; }
+    100% { fill-opacity: 0.15; }
+}
+
+#test {
+    animation: resetFilters 3s forwards;
+    animation-delay: 18s;
+}
+
+
+
+
+    </style>
+
+  </style>
+  <script>
+      let currentPercent = 0;
+
+// Funktion, um eine zufällige Zahl zwischen min und max zu generieren
+function getRandomStep(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Funktion, um die Prozentzahl mit zufälligen Schritten zu animieren
+function animatePercentRandomSteps() {
+  const percentElement = document.getElementById('percent');
+
+  const interval = setInterval(() => {
+    if (currentPercent < 100) {
+      let step = getRandomStep(2, 5);  // Zufälliger Schrittwert zwischen 2 und 5
+      currentPercent += step;
+
+      if (currentPercent > 100) {
+        currentPercent = 100;  // Verhindere, dass die Zahl über 100% hinausgeht
+      }
+
+      percentElement.innerText = currentPercent + "%"; // Aktualisiere die Prozentzahl
+    } else {
+      clearInterval(interval);  // Stoppe die Animation bei 100%
+    }
+  }, 1000);  // Zeitintervall für die Sprünge (alle 500 Millisekunden)
+}
+
+// Animation starten
+animatePercentRandomSteps();
+  </script>
+</html>
