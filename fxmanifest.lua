@@ -1,4 +1,4 @@
-author 'MX, source'
+author 'MXx77, source'
 
 fx_version 'cerulean'
 game 'gta5'
