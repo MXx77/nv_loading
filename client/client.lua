@@ -1,8 +1,8 @@
-local efwf = false							
+local nv = false							
 
-AddEventHandler("playerSpawned", function () 	-- Wait for player to spawn
-	if not efwf then
-		ShutdownLoadingScreenNui()				-- Close loading screen resource
-		efwf = true
+AddEventHandler("playerSpawned", function () 	
+	if not nv then
+		ShutdownLoadingScreenNui()			
+		nv = true
 	end
 end)

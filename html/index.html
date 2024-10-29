@@ -344,11 +344,12 @@
   </body>
   <style>
 
+    
+
 .container path {
     fill-opacity: 0.15;
 }
 
-/* Für den ersten Container */
 @keyframes glow1 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -359,7 +360,6 @@
     animation: glow1 3s forwards;
 }
 
-/* Für den zweiten Container, Verzögerung von 3s */
 @keyframes glow2 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -371,7 +371,6 @@
     animation-delay: 2s;
 }
 
-/* Für den dritten Container, Verzögerung von 6s */
 @keyframes glow3 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -383,7 +382,6 @@
     animation-delay: 4s;
 }
 
-/* Für den vierten Container, Verzögerung von 9s */
 @keyframes glow4 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -395,7 +393,6 @@
     animation-delay: 6s;
 }
 
-/* Für den fünften Container, Verzögerung von 12s */
 @keyframes glow5 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -407,7 +404,6 @@
     animation-delay: 8s;
 }
 
-/* Für den sechsten Container, Verzögerung von 15s */
 @keyframes glow6 {
     0% { fill-opacity: 0.15; }
     50% { fill-opacity: 1; }
@@ -506,7 +502,7 @@
     animation: glow6 3s forwards;
     animation-delay: 20s;
 }
-/* Letzte Phase: alle Container verschwinden ruckartig */
+
 @keyframes resetFilters {
     0% { fill-opacity: 1; }
     99% { fill-opacity: 1; }
@@ -525,34 +521,35 @@
 
   </style>
   <script>
+
+    //animation number
       let currentPercent = 0;
 
-// Funktion, um eine zufällige Zahl zwischen min und max zu generieren
+
 function getRandomStep(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Funktion, um die Prozentzahl mit zufälligen Schritten zu animieren
+
 function animatePercentRandomSteps() {
   const percentElement = document.getElementById('percent');
 
   const interval = setInterval(() => {
     if (currentPercent < 100) {
-      let step = getRandomStep(2, 5);  // Zufälliger Schrittwert zwischen 2 und 5
+      let step = getRandomStep(2, 5);  // change
       currentPercent += step;
 
       if (currentPercent > 100) {
-        currentPercent = 100;  // Verhindere, dass die Zahl über 100% hinausgeht
+        currentPercent = 100;  
       }
 
-      percentElement.innerText = currentPercent + "%"; // Aktualisiere die Prozentzahl
+      percentElement.innerText = currentPercent + "%"; 
     } else {
-      clearInterval(interval);  // Stoppe die Animation bei 100%
+      clearInterval(interval);  
     }
-  }, 1000);  // Zeitintervall für die Sprünge (alle 500 Millisekunden)
+  }, 1000);  // change
 }
 
-// Animation starten
 animatePercentRandomSteps();
   </script>
 </html>
